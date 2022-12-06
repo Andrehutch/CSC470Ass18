@@ -1,0 +1,44 @@
+//Object-oriented programming
+class Student {
+    //fields/attributes/properties
+    String name;
+    int id;
+    float GPA;
+
+    //constructor
+    Student(String name, int id){
+        this.name = name;
+        this.id = id;
+    }
+
+    //method
+    void Called(){
+        System.out.print(this.id + " " + this.name);
+    }
+}
+Student Andre = new Student("Andre", 300);
+Andre.Called();
+
+Student dame; //what is dame right now?
+dame.Called();
+  
+//output: 300 Andre
+//procedure programming
+(define Called
+  (lambda(name id)
+     (display(id + " " + name)
+  )
+)
+function Called(String name, int id){
+    System.out.print(id + " " + name);
+}
+Called("Andre", 300); //output: 300 Andre
+
+
+(define object
+  (lambda(
+        (fields (name Andre) (id 300) (GPA 3.3) (name dame) (id 200) (GPA 3.0)
+        (constructor (lambda (name Andre) (id 300) (name dame) (id 200)))
+        (methods (drive (lambda (name Andre) (id 300) (name dame) (id 200))))
+    )
+)
